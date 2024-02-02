@@ -1,5 +1,7 @@
 package by.itsteap.goutor.javatask.stage11.util.numberinitializer;
 
+import by.itsteap.goutor.javatask.stage11.util.view.Printer;
+
 import java.util.Scanner;
 
 public class NumberInitializer {
@@ -10,7 +12,7 @@ public class NumberInitializer {
     }
 
     public static int getUserNumber() {
-
+        Printer.print("Enter your digit: ");
         return SCANNER.nextInt();
     }
 }
