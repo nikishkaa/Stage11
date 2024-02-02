@@ -12,6 +12,7 @@ public class NumberLogic {
         int divisor = number;
 
         int count = 2;
+
         while (count < number) {
             if (number % count == 0) {
                 divisor = count;
