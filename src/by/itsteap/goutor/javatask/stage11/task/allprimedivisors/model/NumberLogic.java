@@ -1,17 +1,22 @@
 package by.itsteap.goutor.javatask.stage11.task.allprimedivisors.model;
 
-public class PrimeDivisorsLogic {
-    public static int[] getAllPrimeDivisors(int number) {
+public class NumberLogic {
+    public static StringBuilder BUILDER;
+
+    static {
+        BUILDER = new StringBuilder();
+    }
+
+    public static StringBuilder getAllPrimeDivisors(int number) {
 
         if (number < 2) {
-            return new int[]{-1};
+            return BUILDER.append("Invalid value");
         }
 
-        int[] primeDivisors = new int[10];
-        int count = 0;
 
+        double t = Math.sqrt(number);
 
-        for (int i = 2; i <= Math.sqrt(number); i++) {
+        for (int i = 2; i <= t; i++) {
             if (number % i == 0) {
 
                 boolean isPrime = true;
@@ -25,12 +30,12 @@ public class PrimeDivisorsLogic {
                 }
 
                 if (isPrime) {
-                    primeDivisors[count++] = i;
+                    BUILDER.append(i).append(" ");
                 }
             }
         }
 
 
-        return primeDivisors;
+        return BUILDER;
     }
 }
