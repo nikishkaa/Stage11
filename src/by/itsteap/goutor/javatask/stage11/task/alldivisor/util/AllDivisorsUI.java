@@ -3,16 +3,9 @@ package by.itsteap.goutor.javatask.stage11.task.alldivisor.util;
 import java.util.Arrays;
 
 public class AllDivisorsUI {
-    public static String getAllDivisorsUI(int[] divisors) {
+    public static StringBuilder getAllDivisorsUI(StringBuilder BUILDER) {
 
-        String msg = "All divisors your number is: ";
-
-        return msg + getNumberString(divisors);
+        return BUILDER.append("- All divisors in your number");
     }
 
-
-    private static String getNumberString(int[] divisors) {
-
-        return Arrays.toString(divisors);
-    }
 }
