@@ -11,18 +11,13 @@ public class NumberLogic {
 
         int divisor = number;
 
-        int count = 2;
 
-        while (count < number) {
-            if (number % count == 0) {
-                divisor = count;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                divisor = i;
                 break;
             }
-
-            count++;
-
         }
-
 
         return divisor;
     }
