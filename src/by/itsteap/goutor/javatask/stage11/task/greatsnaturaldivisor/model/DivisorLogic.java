@@ -9,18 +9,13 @@ public class DivisorLogic {
         }
 
         int divisor = number;
-        int count = number - 1;
 
-        while (count > 0) {
-
-            if (number % count == 0 && count != 1) {
-                divisor = count;
+        for (int i = number - 1; i > 0; i--) {
+            if (number % i == 0 && i != 1) {
+                divisor = i;
                 break;
             }
-
-            count--;
         }
-
 
         return divisor;
     }
