@@ -14,18 +14,12 @@ public class NumberLogic {
         }
 
 
-        int count = 2;
-
-        while (count <= number) {
-
-            if (number % count == 0) {
-                BUILDER.append(count).append(" ");
-                count++;
+        for (int i = 2; i <= number; i++) {
+            if (number % i == 0) {
+                BUILDER.append(i).append(" ");
             }
-
-            count++;
-
         }
+
 
         return BUILDER;
     }
